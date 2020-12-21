@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-MainProject/Pods-MainProject-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework
+${BUILT_PRODUCTS_DIR}/DCAModule/DCAModule.framework
+${BUILT_PRODUCTS_DIR}/DCAModule_Category/DCAModule_Category.framework
+${BUILT_PRODUCTS_DIR}/DCBModule_Category/DCBModule_Category.framework

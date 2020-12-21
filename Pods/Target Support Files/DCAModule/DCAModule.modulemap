@@ -1,0 +1,6 @@
+framework module DCAModule {
+  umbrella header "DCAModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

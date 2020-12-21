@@ -1,0 +1,6 @@
+framework module DCBModule_Category {
+  umbrella header "DCBModule_Category-umbrella.h"
+
+  export *
+  module * { export * }
+}

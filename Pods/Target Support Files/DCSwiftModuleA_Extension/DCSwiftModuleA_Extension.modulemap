@@ -1,0 +1,6 @@
+framework module DCSwiftModuleA_Extension {
+  umbrella header "DCSwiftModuleA_Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,29 +1,29 @@
 //
-//  ViewController.m
+//  OCHomeViewController.m
 //  MainProject
 //
-//  Created by 戴川 on 2020/12/21.
+//  Created by 戴川 on 2020/12/22.
 //
 
-#import "ViewController.h"
 #import "OCHomeViewController.h"
-#import "MainProject-Swift.h"
-
-
+#import <DCAModule_Category/CTMediator+DCAModule_Category.h>
+#import <DCSwiftModuleA_Extension/DCSwiftModuleA_Extension-Swift.h>
 #define KScreenWidth  [[UIScreen mainScreen] bounds].size.width
 #define KScreenHeight [[UIScreen mainScreen] bounds].size.height
-
-@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface OCHomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
 
+
 @end
 
-@implementation ViewController
+@implementation OCHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    self.view.backgroundColor = UIColor.whiteColor;
+    self.title = @"OCHomeViewController";
     
 }
 - (void)viewWillLayoutSubviews
@@ -52,15 +52,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        // OCHomeViewController
-        UIViewController *viewController = [[OCHomeViewController alloc]init];
-        [self.navigationController pushViewController:viewController animated:true];
+        // Objective-C -> Category -> Objective-C
+        UIViewController *viewController = [[CTMediator sharedInstance] DCAModule_aViewController];
+        [self.navigationController pushViewController:viewController animated:YES];
     }
     if (indexPath.row == 1) {
-        UIViewController *viewController = [[SwiftHomeViewController alloc]init];
-        [self.navigationController pushViewController:viewController animated:true];
+        NSLog(@"Objective-C -> Category -> Swift");
+        
     }
-   
+    if (indexPath.row == 2) {
+        NSLog(@"Objective-C -> Extension -> Objective");
+
+    }
+    if (indexPath.row == 3) {
+        [[CTMediator sharedInstance] DCSwiftModuleA_Extension_ShowSwiftAViewControllerWithViewController:self callback:^(NSString *result) {
+            NSLog(@"callback.string = %@",result);
+        }];
+        
+    }
 }
 
 #pragma mark - getters and setters
@@ -79,8 +88,10 @@
 {
     if (_dataSource == nil) {
         _dataSource = @[
-                        @"OCHomeViewController",
-                        @"SwiftHomeViewController",
+                        @"Objective-C -> Category -> Objective-C",
+                        @"Objective-C -> Category -> Swift",
+                        @"Objective-C -> Extension -> Objective-C",
+                        @"Objective-C -> Extension -> Swift",
                         ];
     }
     return _dataSource;

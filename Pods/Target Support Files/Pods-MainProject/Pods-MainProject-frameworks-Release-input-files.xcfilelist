@@ -3,3 +3,5 @@ ${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework
 ${BUILT_PRODUCTS_DIR}/DCAModule/DCAModule.framework
 ${BUILT_PRODUCTS_DIR}/DCAModule_Category/DCAModule_Category.framework
 ${BUILT_PRODUCTS_DIR}/DCBModule_Category/DCBModule_Category.framework
+${BUILT_PRODUCTS_DIR}/DCSwiftModuleA/DCSwiftModuleA.framework
+${BUILT_PRODUCTS_DIR}/DCSwiftModuleA_Extension/DCSwiftModuleA_Extension.framework

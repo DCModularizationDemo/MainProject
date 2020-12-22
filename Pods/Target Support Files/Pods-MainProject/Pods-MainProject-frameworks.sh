@@ -201,12 +201,16 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/DCAModule/DCAModule.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DCAModule_Category/DCAModule_Category.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DCBModule_Category/DCBModule_Category.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DCSwiftModuleA/DCSwiftModuleA.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DCSwiftModuleA_Extension/DCSwiftModuleA_Extension.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DCAModule/DCAModule.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DCAModule_Category/DCAModule_Category.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DCBModule_Category/DCBModule_Category.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DCSwiftModuleA/DCSwiftModuleA.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DCSwiftModuleA_Extension/DCSwiftModuleA_Extension.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

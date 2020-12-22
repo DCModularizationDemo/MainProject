@@ -1,0 +1,1 @@
+pod "DCSwiftModuleA_Extension"

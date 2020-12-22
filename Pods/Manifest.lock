@@ -6,16 +6,23 @@ PODS:
     - CTMediator
   - DCBModule_Category (2.0.0):
     - CTMediator
+  - DCSwiftModuleA (1.0.0)
+  - DCSwiftModuleA_Extension (1.0.0):
+    - CTMediator
 
 DEPENDENCIES:
   - DCAModule
   - DCAModule_Category
+  - DCSwiftModuleA
+  - DCSwiftModuleA_Extension
 
 SPEC REPOS:
   "git@github.com:daichuan/DCPrivatePod.git":
     - DCAModule
     - DCAModule_Category
     - DCBModule_Category
+    - DCSwiftModuleA
+    - DCSwiftModuleA_Extension
   https://github.com/CocoaPods/Specs.git:
     - CTMediator
 
@@ -24,7 +31,9 @@ SPEC CHECKSUMS:
   DCAModule: 371f61e4c7df5a03ab210744235df3c54d53d70e
   DCAModule_Category: f48404c2f5b59741cba0ba825fc863c692764056
   DCBModule_Category: ffd03fa7a39b0b7bb44da62438accdd79c43e548
+  DCSwiftModuleA: dba5b768a3e392fbfac523d3c410bc07a0e21008
+  DCSwiftModuleA_Extension: 5d86046c61a162e2899148730141835550028f2f
 
-PODFILE CHECKSUM: 3f488c74669ca5e902faa13ae823b9707b20be76
+PODFILE CHECKSUM: 5b082e5c5de1d3bf02f50ff49696da9e6d352247
 
 COCOAPODS: 1.9.3

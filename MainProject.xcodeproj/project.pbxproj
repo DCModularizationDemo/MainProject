@@ -19,6 +19,8 @@
 		436D8337259034B90059BC3F /* MainProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 436D8336259034B90059BC3F /* MainProjectUITests.m */; };
 		436D8358259036870059BC3F /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436D8357259036870059BC3F /* BViewController.m */; };
 		436D8361259036AC0059BC3F /* Target_DCBModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 436D8360259036AC0059BC3F /* Target_DCBModule.m */; };
+		4380EDC62591D4E7008DA1A0 /* OCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4380EDC52591D4E7008DA1A0 /* OCHomeViewController.m */; };
+		4380EDCC2591D50D008DA1A0 /* SwiftHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380EDCB2591D50D008DA1A0 /* SwiftHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		436D8357259036870059BC3F /* BViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		436D835F259036AC0059BC3F /* Target_DCBModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_DCBModule.h; sourceTree = "<group>"; };
 		436D8360259036AC0059BC3F /* Target_DCBModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_DCBModule.m; sourceTree = "<group>"; };
+		4380EDC42591D4E7008DA1A0 /* OCHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHomeViewController.h; sourceTree = "<group>"; };
+		4380EDC52591D4E7008DA1A0 /* OCHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHomeViewController.m; sourceTree = "<group>"; };
+		4380EDCA2591D50C008DA1A0 /* MainProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MainProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		4380EDCB2591D50D008DA1A0 /* SwiftHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomeViewController.swift; sourceTree = "<group>"; };
 		7B9B78D60C0BBC9138CD8892 /* Pods-MainProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainProject.release.xcconfig"; path = "Target Support Files/Pods-MainProject/Pods-MainProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,11 +138,15 @@
 				436D8313259034B80059BC3F /* SceneDelegate.m */,
 				436D8315259034B80059BC3F /* ViewController.h */,
 				436D8316259034B80059BC3F /* ViewController.m */,
+				4380EDC42591D4E7008DA1A0 /* OCHomeViewController.h */,
+				4380EDC52591D4E7008DA1A0 /* OCHomeViewController.m */,
+				4380EDCB2591D50D008DA1A0 /* SwiftHomeViewController.swift */,
 				436D8318259034B80059BC3F /* Main.storyboard */,
 				436D831B259034B90059BC3F /* Assets.xcassets */,
 				436D831D259034B90059BC3F /* LaunchScreen.storyboard */,
 				436D8320259034B90059BC3F /* Info.plist */,
 				436D8321259034B90059BC3F /* main.m */,
+				4380EDCA2591D50C008DA1A0 /* MainProject-Bridging-Header.h */,
 			);
 			path = MainProject;
 			sourceTree = "<group>";
@@ -247,6 +257,7 @@
 				TargetAttributes = {
 					436D830B259034B80059BC3F = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					436D8326259034B90059BC3F = {
 						CreatedOnToolsVersion = 12.3;
@@ -355,7 +366,9 @@
 				436D8317259034B80059BC3F /* ViewController.m in Sources */,
 				436D8311259034B80059BC3F /* AppDelegate.m in Sources */,
 				436D8361259036AC0059BC3F /* Target_DCBModule.m in Sources */,
+				4380EDC62591D4E7008DA1A0 /* OCHomeViewController.m in Sources */,
 				436D8322259034B90059BC3F /* main.m in Sources */,
+				4380EDCC2591D50D008DA1A0 /* SwiftHomeViewController.swift in Sources */,
 				436D8358259036870059BC3F /* BViewController.m in Sources */,
 				436D8314259034B80059BC3F /* SceneDelegate.m in Sources */,
 			);
@@ -530,6 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MainProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -538,6 +552,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DC.MainProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MainProject/MainProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -548,6 +565,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MainProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,6 +574,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DC.MainProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MainProject/MainProject-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -563,6 +583,7 @@
 		436D833F259034B90059BC3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MainProjectTests/Info.plist;
@@ -582,6 +603,7 @@
 		436D8340259034B90059BC3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MainProjectTests/Info.plist;
@@ -601,6 +623,7 @@
 		436D8342259034B90059BC3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MainProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -618,6 +641,7 @@
 		436D8343259034B90059BC3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MainProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
